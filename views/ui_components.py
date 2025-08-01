@@ -61,8 +61,6 @@ def get_image_base64(image_path):
         encoded_string = base64.b64encode(f.read()).decode()
     return f"data:image/png;base64,{encoded_string}"
 
-# ✅ Provide Your Local Logo Path Here
-logo_base64 = get_image_base64(LOCAL_LOGO_PATH)
 
 # ✅ Custom CSS to Fix Logo in the Top Left Corner (Smaller & Well Positioned)
 st.markdown(
@@ -77,8 +75,6 @@ st.markdown(
         z-index: 999;
     }}
     </style>
-
-    <img src="{logo_base64}" class="top-left-logo">
     """,
     unsafe_allow_html=True
 )
